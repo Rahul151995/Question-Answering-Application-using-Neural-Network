@@ -1,0 +1,14 @@
+The idea of project is to design and build a Question Answering application which is able 
+to analyse natural languages, process the question and generate possible answers using 
+concepts of deep learning. 
+
+
+This code is written in python.
+install the library as written the code.
+
+
+
+for more information regarding this contact me.
+ 
+                 ->rahulkumar151995@gmail.com
+                 ->https://www.instagram.com/rahulkumar7784
