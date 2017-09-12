@@ -1,0 +1,38 @@
+import nltk as nl
+import numpy as np
+import gensim as ge
+def locationfunc(empl):
+    if(empl=='UP'):
+        return "true"
+    elif(empl=='UttarPradesh'):
+        return "true"
+    elif(empl=='Noida'):
+        return "true"
+    elif(empl=='Australia'):
+        return "true"
+    elif(empl=='India'):
+        return "true"
+    else:
+        return "false"
+#INPUT KNOWLEDGE ####################################################################
+sentence = "Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language."
+sentoke=nl.sent_tokenize(sentence)
+slen= len(sentoke)
+arr = [0 for i in range(slen+1)]     #initialization of whole array
+arst = [0 for i in range(slen+1)]    #initialization of whole array
+
+for p in range(0,(slen)):
+    tokens = nl.word_tokenize(sentoke[p])
+#print all the tokens
+    arst[p]=tokens
+    toke=nl.pos_tag(tokens)
+    fur=np.array(toke)
+    arr[p]=fur    
+
+
+
+#printing the different category of sentence such as it is noun,adjective and adverb.
+for i in range(0,len(arr)-1):
+    print arr[i]
+
+        
